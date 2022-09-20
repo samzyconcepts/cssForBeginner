@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* 
+selector {
+  property Name:  value;
+}
+*/
+
+/* 
+ Selector
+ -  Simple selectors (select elements based on name, id, class)
+ -  Combinator Selector: +, >, ~, (space)
+ -  Pseudo-class selector 
+ -  Pseudo-element selector
+*/
+
+:root {
+  --primary-color: yellow;
+  --green: #00ff00;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  padding: 40px;
+  background-image: url("https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?cs=srgb&dl=pexels-aleksandar-pasaric-325185.jpg&fm=jpg");
+  /* background-color: rgba(0, 0, 255, 0.75); */
+
+  background-blend-mode: multiply;
+  /* background-position: bottom left; */
+  background-repeat: no-repeat;
+  background-clip: padding-box;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+h1 {
+  font-family: "Aboreto", cursive;
+}
+p::first-line {
+  color: red;
+  font-weight: 300;
+}
+p::first-letter {
+  font-size: 3rem;
+  color: blue;
+}
+
+p::before {
+  content: "Here goes a paragraph";
+  position: absolute;
+}
+
+p:after {
+  content: "paragraph stops here";
+}
+
+::selection {
+  background-color: var(--primary-color);
+  color: black;
+}
+::marker {
+  color: var(--primary-color);
+}
+
+input[type="text"] {
+  color: brown;
+  font-size: 50px;
+} 
+
+/* 
+  Fonts
+  font-family
+  font-size
+  font-weight : 100 - 900
+  font-style: normal | italics | oblique
+*/
+/* 
+  Color
+  Name: Red, Blue 
+  Hex value: #rrggbb, #000000, #ffffff
+  RGB: 0-255,  rgb(25, 39, 100)
+  RGBA: alpha/opacity from 0 - 1; rgba(25, 39, 100, 0.25)
+  HSL: hsl(0-360, 0-100, 0-100)
+  HSLA:  hsla(0-360, 0-100%, 0-100%, 0.5)
+*/
+
+/* 
+  Background
+  background-image: url();
+  background-position
+  background-clip
+  background-size
+  background-attachment
+  background-repeat
+  background-color
+*/
+/* 
+  Border
+  border-top/left/right/bottom
+  border-color
+  border-width
+  border-style: solid/dotted/dashed/double/inset
+  border-radius
+*/
+/* 
+  Padding: top/left/right/bottom
+  padding: top&bottom left&right;
+  padding: top right bottom left;
+  
+  margin: top/left/right/bottom
+  margin: top&bottom left&right;
+  margin: top right bottom left;
+*/
+/*
+	Display Properties
+	block
+	inline
+	inline-block
+	flex
+	grid
+*/
+/* 
+  Position
+  relative
+  absolute
+  fixed
+  sticky
+*/
+
+/* 
+  Box-shadow / text shadow
+  x-axis y-axis blur-radius color
+*/
+.box1 {
+  height: 200px;
+  width: 300px;
+  background-color: #00ff00;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5),
+    inset -10px -10px 20px rgba(255, 255, 255, 1);
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.box1 img {
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+.box1:hover img {
+  transform: scale(1.5);
+}
+button {
+  display: inline-block;
+  margin-top: 20px;
+  border-style: none;
+  background-color: var(--primary-color);
+  padding: 10px 15px;
+
+  transition: box-shadow 0.3s ease-in;
+  /* transform: rotate3d(20, 40, 30, 45deg); */
+}
+button:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  transform: scale(1.5);
+  color: hsla(45deg, saturation, lightness, alpha)
+}
+
+/* 
+  Transform Property
+  transform: scale, translate
+*/

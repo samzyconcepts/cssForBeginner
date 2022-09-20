@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .box {
+        height: 200px;
+        width: 200px;
+      }
+      .red {
+        background-color: red;
+      }
+      .yellow {
+        background-color: yellow;
+      }
+      .blue {
+        background-color: blue;
+      }
+
+      .container {
+        display: flex;
+        /* flex-direction: column-reverse; */
+        /* flex-wrap: wrap-reverse; */
+        justify-content: space-around;
+      }
+      /* justify: horizontal axis not until u make use on flex-direction then it changes to vertical axis */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="red box"><h1>Box 1</h1></div>
+      <div class="yellow box"><h1>Box 2</h1></div>
+      <div class="blue box"><h1>Box 3</h1></div>
+    </div>
+  </body>
+</html>

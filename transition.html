@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        background-color: #00ff00;
+        border: none;
+        border-radius: 8px;
+        padding: 10px 15px;
+        transition: all 0.3s ease-in;
+      }
+      /* 
+      Transition
+      transition property: css property name, all
+      transition delay: 
+      timing function
+      duration
+
+      transition: property | delay | duration | timing-function
+    */
+      button:hover {
+        background-color: #0000ff;
+        color: #fff;
+      }
+
+      div {
+        position: relative;
+        height: 400px;
+        width: 300px;
+        padding: 0 20px;
+        background: url("bg.jpg") center/cover no-repeat;
+        display: flex;
+        align-items: flex-end;
+        z-index: 0;
+        cursor: pointer;
+      }
+
+      div:hover::before {
+        right: 0;
+      }
+      div:hover > p {
+        opacity: 1;
+      }
+      div::before {
+        position: absolute;
+        content: "";
+        background-color: rgba(0, 0, 0, 0.7);
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 100%;
+        z-index: -1;
+        transition: right 0.3s ease-in;
+      }
+      p {
+        color: #fff;
+        font-size: 26px;
+        opacity: 0;
+        transition: opacity 0.5s 0.3s ease;
+      }
+    </style>
+  </head>
+  <body>
+    <button>Click here</button>
+
+    <div>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa ex sequi
+        fuga!
+      </p>
+    </div>
+  </body>
+</html>

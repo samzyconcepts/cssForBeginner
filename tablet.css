@@ -1,0 +1,6 @@
+.flex-item:nth-child(2){
+  background-color: rgb(255, 187, 0);
+}
+.flex-item:last-child{
+  background-color: rgb(28, 1, 65);
+}
